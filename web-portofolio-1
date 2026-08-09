@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Yohana Aprilia - Analog Archive</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&amp;family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&amp;family=Space+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary": "#7d5800",
+                      "on-secondary": "#ffffff",
+                      "surface": "#fff8f7",
+                      "on-background": "#26181a",
+                      "on-tertiary-fixed-variant": "#314f00",
+                      "secondary-container": "#ffb702",
+                      "secondary-fixed": "#ffdea9",
+                      "outline": "#8d7074",
+                      "inverse-surface": "#3d2c2f",
+                      "secondary-fixed-dim": "#ffba27",
+                      "on-tertiary-container": "#1c3000",
+                      "tertiary-container": "#69a100",
+                      "surface-tint": "#b91150",
+                      "on-tertiary-fixed": "#111f00",
+                      "surface-container": "#ffe9eb",
+                      "on-secondary-fixed-variant": "#5e4100",
+                      "on-primary": "#ffffff",
+                      "on-surface-variant": "#594044",
+                      "primary-fixed-dim": "#ffb2bf",
+                      "background": "#fff8f7",
+                      "primary": "#b91150",
+                      "inverse-on-surface": "#ffecee",
+                      "surface-container-high": "#fde2e5",
+                      "on-tertiary": "#ffffff",
+                      "error": "#ba1a1a",
+                      "surface-container-low": "#fff0f1",
+                      "on-surface": "#26181a",
+                      "on-error-container": "#93000a",
+                      "outline-variant": "#e1bec3",
+                      "primary-container": "#ff4f81",
+                      "on-primary-fixed-variant": "#90003b",
+                      "on-secondary-container": "#6b4b00",
+                      "on-primary-container": "#5b0022",
+                      "inverse-primary": "#ffb2bf",
+                      "tertiary-fixed-dim": "#99d937",
+                      "primary-fixed": "#ffd9de",
+                      "on-primary-fixed": "#3f0016",
+                      "tertiary": "#436900",
+                      "tertiary-fixed": "#b3f652",
+                      "on-secondary-fixed": "#271900",
+                      "surface-container-lowest": "#ffffff",
+                      "on-error": "#ffffff",
+                      "surface-variant": "#f7dcdf",
+                      "surface-container-highest": "#f7dcdf",
+                      "error-container": "#ffdad6",
+                      "surface-dim": "#eed4d7",
+                      "surface-bright": "#fff8f7"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-sm": "0.5rem",
+                      "gutter": "1rem",
+                      "stack-lg": "3rem",
+                      "margin-page": "1.5rem",
+                      "stack-md": "1.5rem"
+              },
+              "fontFamily": {
+                      "headline-md": [
+                              "Space Grotesk"
+                      ],
+                      "body-md": [
+                              "DM Sans"
+                      ],
+                      "body-lg": [
+                              "DM Sans"
+                      ],
+                      "headline-sm": [
+                              "Space Grotesk"
+                      ],
+                      "accent-label": [
+                              "Courier Prime"
+                      ],
+                      "display-lg": [
+                              "Space Grotesk"
+                      ],
+                      "caption": [
+                              "DM Sans"
+                      ]
+              },
+              "fontSize": {
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "accent-label": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "caption": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        body {
+            background-color: #fff8f7; /* fallback */
+            background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)" opacity="0.05"/%3E%3C/svg%3E');
+        }
+        
+        .brutalist-shadow {
+            box-shadow: 4px 4px 0px 0px #151515;
+        }
+        .brutalist-shadow-lg {
+            box-shadow: 8px 8px 0px 0px #151515;
+        }
+        
+        .brutalist-border {
+            border: 3px solid #26181a;
+        }
+        
+        .tape-sticker {
+            position: absolute;
+            width: 80px;
+            height: 24px;
+            background-color: rgba(255, 79, 129, 0.6); /* primary-container semi-transparent */
+            z-index: 10;
+            transform: rotate(-5deg);
+        }
+        .tape-sticker.yellow {
+            background-color: rgba(255, 183, 2, 0.6); /* secondary-container semi-transparent */
+            transform: rotate(3deg);
+        }
+        
+        .washi-tape-pink { background-color: rgba(255, 79, 129, 0.5); mix-blend-mode: multiply; }
+        .washi-tape-yellow { background-color: rgba(255, 183, 2, 0.5); mix-blend-mode: multiply; }
+        .washi-tape-green { background-color: rgba(105, 161, 0, 0.5); mix-blend-mode: multiply; }
+        
+        .nav-link-hover:hover {
+            transform: translateX(2px) translateY(2px);
+            box-shadow: none;
+            transition: all 0.1s ease;
+        }
+
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="bg-background/90 dark:bg-background/90 backdrop-blur-sm docked full-width top-0 sticky border-b-2 border-on-background dark:border-outline-variant shadow-[4px_4px_0px_0px_rgba(21,21,21,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,236,238,0.2)] flex justify-between items-center w-full px-margin-page py-4 max-w-full z-50">
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant dark:text-outline-variant hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all duration-100 cursor-pointer active:scale-95 flex items-center justify-center p-2 brutalist-border bg-surface brutalist-shadow md:hidden">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<span class="font-display-lg text-display-lg font-bold tracking-tighter text-on-background dark:text-on-background">YOHANA</span>
+</div>
+<nav class="hidden md:flex gap-8 items-center font-accent-label text-accent-label">
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors font-bold tracking-wider" href="#work">WORK</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors font-bold tracking-wider" href="#about">ABOUT</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors font-bold tracking-wider" href="#learning">LEARNING</a>
+</nav>
+<div>
+<a class="hidden md:inline-block font-headline-md text-body-md bg-primary text-on-primary px-6 py-2 brutalist-border brutalist-shadow nav-link-hover cursor-pointer active:scale-95" href="#contact">
+                ✦ LET'S CREATE
+            </a>
+<a class="md:hidden font-headline-md text-caption bg-primary text-on-primary px-4 py-2 brutalist-border brutalist-shadow nav-link-hover cursor-pointer active:scale-95" href="#contact">
+                ✦ CONTACT
+            </a>
+</div>
+</header>
+<!-- Navigation Drawer (Hidden by default, used for mobile) -->
+<aside class="fixed inset-y-0 left-0 z-50 bg-surface-container dark:bg-inverse-surface h-screen w-80 rounded-none border-r-3 border-on-background shadow-[8px_0px_0px_0px_rgba(21,21,21,1)] flex flex-col p-6 gap-stack-md transform -translate-x-full transition-transform duration-300 md:hidden" id="nav-drawer">
+<div class="flex justify-between items-center mb-8">
+<span class="font-display-lg text-headline-md text-primary font-bold">YOHANA APRILIA</span>
+<button class="brutalist-border bg-surface p-1 brutalist-shadow nav-link-hover" id="close-drawer">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<nav class="flex flex-col gap-4 font-headline-sm text-headline-sm uppercase">
+<a class="flex items-center gap-4 p-4 text-on-surface dark:text-on-surface-variant hover:bg-primary-container hover:text-on-primary-container transition-colors brutalist-border scale-100 active:scale-98" href="#work">
+<span class="material-symbols-outlined" data-icon="gallery_thumbnail">gallery_thumbnail</span>
+                WORK
+            </a>
+<a class="flex items-center gap-4 p-4 text-on-surface dark:text-on-surface-variant hover:bg-primary-container hover:text-on-primary-container transition-colors brutalist-border scale-100 active:scale-98" href="#about">
+<span class="material-symbols-outlined" data-icon="face">face</span>
+                ABOUT
+            </a>
+<a class="flex items-center gap-4 p-4 text-on-surface dark:text-on-surface-variant hover:bg-primary-container hover:text-on-primary-container transition-colors brutalist-border scale-100 active:scale-98" href="#learning">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+                LEARNING
+            </a>
+<a class="flex items-center gap-4 p-4 text-on-surface dark:text-on-surface-variant hover:bg-primary-container hover:text-on-primary-container transition-colors brutalist-border scale-100 active:scale-98" href="#contact">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+                CONTACT
+            </a>
+</nav>
+</aside>
+<main>
+<!-- HERO Section -->
+<section class="relative min-h-[90vh] flex flex-col items-center justify-center px-margin-page py-stack-lg overflow-hidden">
+<!-- Decorative Elements -->
+<div class="absolute top-20 left-10 w-32 h-32 bg-secondary-container rounded-full mix-blend-multiply filter blur-xl opacity-50 z-0"></div>
+<div class="absolute bottom-20 right-10 w-48 h-48 bg-primary-container rounded-full mix-blend-multiply filter blur-xl opacity-50 z-0"></div>
+<div class="relative z-10 text-center mb-8">
+<div class="inline-block relative">
+<div class="tape-sticker -top-3 left-4"></div>
+<span class="font-accent-label text-accent-label bg-secondary-container text-on-secondary-container px-2 py-1 brutalist-border brutalist-shadow absolute -top-6 -right-10 rotate-6">VOL. 01</span>
+</div>
+<h1 class="font-display-lg text-[64px] md:text-[96px] font-bold tracking-tighter leading-none text-on-background mt-4 relative">
+                    HI, I'M YOHANA<br/>APRILIA.
+                </h1>
+<p class="font-accent-label text-body-lg mt-6 max-w-lg mx-auto bg-surface-variant p-4 brutalist-border brutalist-shadow">
+                    Exploring the intersection of high fashion, analog textures, and digital chaos.
+                </p>
+</div>
+<div class="relative z-10 mt-12 max-w-3xl w-full">
+<div class="absolute -top-4 -left-4 w-16 h-8 washi-tape-pink rotate-[-12deg] z-20"></div>
+<div class="absolute -bottom-4 -right-4 w-20 h-8 washi-tape-yellow rotate-[8deg] z-20"></div>
+<div class="bg-surface p-4 pb-12 brutalist-border brutalist-shadow-lg transform rotate-[-2deg] transition-transform hover:rotate-0 duration-300">
+<img alt="Yohana holding vintage camera" class="w-full h-auto object-cover brutalist-border filter contrast-125 saturate-110 grayscale-[10%]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkn38oc4FK62yjT1iOVgn5DbWYZDX0yfAg-lj43Bx7G8ldArp4E19NOxTYe2Mm3My3LqNVE77gMRkejag-Sp4N7j-JkNE0bq41DWsx94K9vSHQa7XKYREbSFzbvC_2D3D03xQd_YGmLpS6txmA0XhckUpxU4jn7FMo1MavqFpIvPmvytK9letXuSm_G7zNTq19JXte6iNLnKLj7xbwxiINCmOsM4euciqVMaWV4J7GiAsFWntwxsorTiyIABJ5H4jNU1M"/>
+<div class="absolute bottom-4 right-4 font-accent-label text-caption">FIG 1. THE OBSERVER</div>
+</div>
+</div>
+</section>
+<!-- ABOUT Section -->
+<section class="px-margin-page py-stack-lg bg-surface-container-high border-y-3 border-on-background relative z-10" id="about">
+<div class="max-w-7xl mx-auto">
+<div class="flex items-center gap-4 mb-12">
+<h2 class="font-headline-md text-display-lg font-bold">WHO'S BEHIND THE CAMERA?</h2>
+<div class="h-1 flex-grow bg-on-background mt-4"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="bg-primary-container p-6 brutalist-border brutalist-shadow transform rotate-1 hover:rotate-0 transition-transform relative">
+<div class="absolute top-2 right-2 font-display-lg text-headline-sm">✦</div>
+<h3 class="font-headline-sm text-headline-md mb-4 text-on-primary-container border-b-2 border-on-background pb-2 inline-block">FASHION EDITOR</h3>
+<p class="font-accent-label text-body-md text-on-primary-container leading-relaxed mt-4">Curating narratives through garments. Focusing on avant-garde silhouettes and sustainable archives.</p>
+<div class="mt-8">
+<span class="inline-block bg-surface px-3 py-1 text-caption brutalist-border font-bold">VOGUE</span>
+<span class="inline-block bg-surface px-3 py-1 text-caption brutalist-border font-bold">DAZED</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-secondary-container p-6 brutalist-border brutalist-shadow transform -rotate-1 hover:rotate-0 transition-transform mt-0 md:mt-12 relative">
+<div class="absolute -top-3 left-1/2 w-16 h-6 washi-tape-pink z-10"></div>
+<h3 class="font-headline-sm text-headline-md mb-4 text-on-secondary-container border-b-2 border-on-background pb-2 inline-block">STYLIST</h3>
+<p class="font-accent-label text-body-md text-on-secondary-container leading-relaxed mt-4">Blending Y2K nostalgia with contemporary minimalism. Creating looks that speak before the wearer does.</p>
+<div class="mt-8 flex gap-2 flex-wrap">
+<span class="inline-block bg-surface px-3 py-1 text-caption brutalist-border font-bold">EDITORIAL</span>
+<span class="inline-block bg-surface px-3 py-1 text-caption brutalist-border font-bold">RUNWAY</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-tertiary-container p-6 brutalist-border brutalist-shadow transform rotate-2 hover:rotate-0 transition-transform relative">
+<div class="absolute top-2 right-2 font-display-lg text-headline-sm text-on-tertiary-container">✦</div>
+<h3 class="font-headline-sm text-headline-md mb-4 text-on-tertiary-container border-b-2 border-on-background pb-2 inline-block">ANALOG PHOTOGRAPHER</h3>
+<p class="font-accent-label text-body-md text-on-tertiary-container leading-relaxed mt-4">Documenting the process on 35mm and medium format. Embracing the imperfections of film grain.</p>
+<div class="mt-8 flex gap-2 flex-wrap">
+<span class="inline-block bg-surface px-3 py-1 text-caption brutalist-border font-bold">PORTRAIT</span>
+<span class="inline-block bg-surface px-3 py-1 text-caption brutalist-border font-bold">DOCUMENTARY</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SELECTED WORKS Grid -->
+<section class="px-margin-page py-stack-lg relative" id="work">
+<div class="absolute top-0 right-10 w-64 h-64 border-4 border-dashed border-primary opacity-20 rounded-full -z-10"></div>
+<h2 class="font-headline-md text-display-lg font-bold mb-12 relative inline-block">
+                SELECTED WORKS
+                <div class="absolute -bottom-2 left-0 w-full h-4 bg-secondary-container mix-blend-multiply -z-10"></div>
+</h2>
+<div class="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
+<!-- Project 1 -->
+<div class="break-inside-avoid relative group">
+<div class="absolute -top-3 -left-3 w-12 h-6 washi-tape-yellow z-20"></div>
+<div class="bg-surface p-3 pb-10 brutalist-border brutalist-shadow transition-transform hover:-translate-y-2 duration-300">
+<div class="bg-cover bg-center w-full h-80 brutalist-border grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A striking editorial fashion photograph shot on 35mm film featuring a model in a vibrant Y2K inspired outfit standing in an urban concrete environment. The lighting is harsh daylight creating deep brutalist shadows. The aesthetic is grainy, nostalgic, and high-fashion." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAWel6wZ_hahn2HgSiHOIcG-TXZv4X3rjF-AB1XEO9flP2_QpkS7SmHKbSTRVw4VNNrJ6DlL1-ILkEI75ZBPwsAnpE4MprIbPjF2ZwEthWOIegt7axc21c8Lah48R9sh-DWOWl0Rz5NTm3GcRV5ZM3GYC_NTMfDFCKIB1bcPPast8Tb9ryoLW_CbEYN_AXcJexKxM5YN7Bo5n5uAmmzfcD7OvpvIM7kDPWeP4hmaV0Kb-dEXfa9Id7wig')"></div>
+<div class="absolute bottom-3 left-4 right-4 flex justify-between items-center">
+<h4 class="font-headline-sm text-body-lg font-bold uppercase">Afternoon Film</h4>
+<span class="font-accent-label text-caption bg-primary text-on-primary px-2 border border-on-background">2023</span>
+</div>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="break-inside-avoid relative group">
+<div class="bg-surface p-3 pb-10 brutalist-border brutalist-shadow transition-transform hover:-translate-y-2 duration-300">
+<div class="bg-cover bg-center w-full h-64 brutalist-border grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A close up detailed portrait shot on medium format film of a fashion model with eclectic maximalist makeup and bold colorful accessories. The background is a soft blur of a studio setting. The overall mood is avant-garde, textured, and unapologetically expressive." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAF28XUFuJeSDZF5MJJyfZId_-40bqnA-HnmFForPbm4Ag9sGXOFnNKm91c22-j8Omdnr_VMjt5UmUpmRZUheK6RgVtlw5PTi7KxIpKzbhEq63TEyXaW-DsGq6sz6CL3pWSUXTWfYqcrw_ATBAsBFf1__H3a-X2h74vHleEh6yzVRDDcyejq6I3ZLsvX-A9_MzFRcuKIXjakeOr-XiL1PVjyhFemg6lXheSTghEvNXIYtguQfDBQlrklA')"></div>
+<div class="absolute bottom-3 left-4 right-4 flex justify-between items-center">
+<h4 class="font-headline-sm text-body-lg font-bold uppercase">Velvet Underground</h4>
+<span class="font-accent-label text-caption bg-secondary-container text-on-secondary-container px-2 border border-on-background">2024</span>
+</div>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="break-inside-avoid relative group">
+<div class="absolute -top-3 right-4 w-16 h-6 washi-tape-green z-20 rotate-12"></div>
+<div class="bg-surface p-3 pb-10 brutalist-border brutalist-shadow transition-transform hover:-translate-y-2 duration-300">
+<div class="bg-cover bg-center w-full h-96 brutalist-border grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A dynamic action shot from a runway show featuring a model walking fiercely in a deconstructed minimalist garment. The lighting is dramatic and moody, with a strong spotlight and deep blacks. The aesthetic captures the raw energy of high-fashion events." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD8k5ozZT6NOyv_GVrpkayCjLhzsjMInpGE0d_KcNYDTk4tQwBECHX-XfuBP2GZnEUtng0hE39jqwUoRvkF47_mDbTAMDZuyiLotoyLsQTWLH9TtJQRo6h2vAjxEuoGygiRmQrewPw6SuO0TnDfdKP152nrMifL5ON_I9MKUFm1QIFslbopTh7ec9bEE5-yB5f7FpY1S7tsaeIqdfHWYQM6sKg1HT3FngFMu1uMiiIMO7dxYpv5u-hosg')"></div>
+<div class="absolute bottom-3 left-4 right-4 flex justify-between items-center">
+<h4 class="font-headline-sm text-body-lg font-bold uppercase">Runway Archive</h4>
+<span class="font-accent-label text-caption bg-tertiary-container text-on-tertiary-container px-2 border border-on-background">2023</span>
+</div>
+</div>
+</div>
+<!-- Project 4 -->
+<div class="break-inside-avoid relative group">
+<div class="bg-surface p-3 pb-10 brutalist-border brutalist-shadow transition-transform hover:-translate-y-2 duration-300">
+<div class="bg-cover bg-center w-full h-72 brutalist-border grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="An abstract conceptual fashion image focusing on textures, showing layers of torn fabrics, safety pins, and distressed denim. The composition is chaotic and layered, reflecting a DIY scrapbook aesthetic. The lighting is flat and documentary style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD6q78ch1Sb7NFR3kZu__1i3ZspwdEUrOTSveVWwpkXxUAdR77EH57OPWHyO8tVeyGjQAzFgD8HME6VGf_w5QprRab6mJkLORECWTYIg3U4d1dQUf8rbarDuMcQ0f1g4wjyv5smZQUDTJOF7BmJLfwL06ROQ9-D_PryGO2lO5zVhvF_HRx42ayiwTKwDRjog5yHIiYeEoDVsoBKvSelDKp_R5QQVvgUk2vzGa9WvU2aoQwaBMmRcks4mw')"></div>
+<div class="absolute bottom-3 left-4 right-4 flex justify-between items-center">
+<h4 class="font-headline-sm text-body-lg font-bold uppercase">Material Study</h4>
+<span class="font-accent-label text-caption bg-surface-variant text-on-surface px-2 border border-on-background">2022</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CONTACT Section -->
+<section class="px-margin-page py-stack-lg bg-inverse-surface text-inverse-on-surface border-t-3 border-on-background relative overflow-hidden" id="contact">
+<!-- Background Shader -->
+<div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
+
+</div>
+<div class="max-w-4xl mx-auto relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12">
+<div>
+<h2 class="font-display-lg text-display-lg font-bold text-primary-fixed mb-6 leading-tight">LET'S MAKE<br/>SOMETHING<br/>COOL.</h2>
+<p class="font-accent-label text-body-lg mb-8 opacity-80">Open for collaborations, editorial commissions, and analog experiments.</p>
+<div class="flex gap-4">
+<a class="bg-primary-container text-on-primary-container p-4 brutalist-border brutalist-shadow nav-link-hover flex items-center justify-center" href="#">
+<span class="font-headline-sm font-bold uppercase">Email Me</span>
+</a>
+<a class="bg-surface text-on-surface p-4 brutalist-border brutalist-shadow nav-link-hover flex items-center justify-center" href="#">
+<span class="font-headline-sm font-bold uppercase">Instagram</span>
+</a>
+</div>
+</div>
+<div class="bg-surface p-8 brutalist-border brutalist-shadow text-on-background transform rotate-1">
+<form class="space-y-6 font-accent-label">
+<div>
+<label class="block text-caption font-bold mb-2">NAME</label>
+<input class="w-full bg-transparent border-0 border-b-2 border-on-background focus:ring-0 focus:border-primary px-0 py-2 font-accent-label placeholder-on-surface-variant" placeholder="Type here..." type="text"/>
+</div>
+<div>
+<label class="block text-caption font-bold mb-2">EMAIL</label>
+<input class="w-full bg-transparent border-0 border-b-2 border-on-background focus:ring-0 focus:border-primary px-0 py-2 font-accent-label placeholder-on-surface-variant" placeholder="your@email.com" type="email"/>
+</div>
+<div>
+<label class="block text-caption font-bold mb-2">MESSAGE</label>
+<textarea class="w-full bg-surface-variant border-2 border-on-background focus:ring-0 focus:border-primary p-3 font-accent-label placeholder-on-surface-variant h-32 resize-none" placeholder="What's the vision?"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary font-headline-md text-body-lg py-4 brutalist-border brutalist-shadow nav-link-hover" type="submit">
+                            SEND TRANSMISSION
+                        </button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-surface-container-highest text-primary dark:text-primary font-accent-label text-accent-label full-width py-stack-lg border-t-3 border-on-background flex flex-col md:flex-row justify-between items-center px-margin-page w-full z-10 relative">
+<div class="font-headline-sm text-headline-sm italic mb-6 md:mb-0">
+            YOHANA
+        </div>
+<div class="w-full overflow-hidden border-y-2 border-primary py-2 my-4 md:my-0 md:absolute md:left-0 md:right-0 md:top-0 marquee-container bg-surface z-0 hidden md:block">
+<div class="marquee-content font-display-lg text-body-lg font-bold tracking-widest uppercase">
+                FASHION — STYLE — FILM — STORY — FASHION — STYLE — FILM — STORY — FASHION — STYLE — FILM — STORY — FASHION — STYLE — FILM — STORY — 
+            </div>
+</div>
+<div class="flex flex-col md:flex-row items-center gap-4 md:gap-8 z-10 bg-surface-container-highest px-4">
+<span class="text-on-surface opacity-80 text-center md:text-left mb-4 md:mb-0">YOHANA APRILIA © 2024 — STYLED WITH PASSION &amp; ANALOG HEART</span>
+<div class="flex gap-6">
+<a class="text-on-surface hover:text-tertiary-container hover:skew-x-2 transition-transform uppercase" href="#">INSTAGRAM</a>
+<a class="text-on-surface hover:text-tertiary-container hover:skew-x-2 transition-transform uppercase" href="#">LINKEDIN</a>
+<a class="text-on-surface hover:text-tertiary-container hover:skew-x-2 transition-transform uppercase" href="#">VOGUE PORTFOLIO</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple drawer toggle logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const drawer = document.getElementById('nav-drawer');
+            const menuBtn = document.querySelector('button[aria-label="Menu"]'); // Assuming you add aria-label if needed, or select by class
+            const closeBtn = document.getElementById('close-drawer');
+            
+            // Re-select menu button more specifically since we didn't add an ID
+            const headerMenuBtn = document.querySelector('header button');
+
+            if(headerMenuBtn && drawer && closeBtn) {
+                headerMenuBtn.addEventListener('click', () => {
+                    drawer.classList.remove('-translate-x-full');
+                });
+
+                closeBtn.addEventListener('click', () => {
+                    drawer.classList.add('-translate-x-full');
+                });
+            }
+        });
+    </script>
+</body></html>
